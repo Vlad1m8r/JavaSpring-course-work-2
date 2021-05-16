@@ -2,6 +2,7 @@ package group.Taxi.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 import java.sql.Date;
@@ -23,6 +24,7 @@ public class Order {
 
     @Column(nullable = false)
     @NotNull
+    @JsonFormat(pattern="hh:mm")
     private Time time;
 
     @Column(nullable = false)

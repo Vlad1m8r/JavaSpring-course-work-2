@@ -92,10 +92,11 @@ public class OrderController {
 
     //save order
     @PostMapping("orders")
-    public ResponseEntity<Order> createOrder(@Valid @RequestBody Order order, BindingResult bindingResult) throws ResourceNotFoundException {
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Order> createOrder(@Valid @RequestBody
+                                                         Order order) throws ResourceNotFoundException {
+//        if (bindingResult.hasErrors()) {
+//            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+//        }
 
         Client client = clientRepository.findById(order.getClient().getId())
                 .orElseThrow(() -> new ResourceNotFoundException("Client not found for this id:: " + order.getClient().getId()));
