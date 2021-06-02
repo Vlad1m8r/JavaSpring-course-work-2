@@ -42,10 +42,7 @@ public class DriverController {
 
     //save driver
     @PostMapping("drivers")
-    public ResponseEntity<Driver> createDriver(@Valid @RequestBody Driver driver, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Driver> createDriver(@Valid @RequestBody Driver driver) {
         return new ResponseEntity<>(driverRepository.save(driver), HttpStatus.OK);
     }
 

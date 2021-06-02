@@ -42,10 +42,7 @@ public class CarController {
 
     //save car
     @PostMapping("cars")
-    public ResponseEntity<Car> createCar(@Valid @RequestBody Car car, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Car> createCar(@Valid @RequestBody Car car) {
         return new ResponseEntity<>(carRepository.save(car), HttpStatus.OK);
     }
 

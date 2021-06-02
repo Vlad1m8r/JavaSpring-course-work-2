@@ -76,7 +76,6 @@ public class OrderController {
                 response.put("max", o.getCost());
             response.put("sum", response.get("sum")+o.getCost());
         }
-
         return response;
     }
 
@@ -94,9 +93,6 @@ public class OrderController {
     @PostMapping("orders")
     public ResponseEntity<Order> createOrder(@Valid @RequestBody
                                                          Order order) throws ResourceNotFoundException {
-//        if (bindingResult.hasErrors()) {
-//            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-//        }
 
         Client client = clientRepository.findById(order.getClient().getId())
                 .orElseThrow(() -> new ResourceNotFoundException("Client not found for this id:: " + order.getClient().getId()));

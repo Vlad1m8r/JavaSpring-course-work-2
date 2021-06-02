@@ -43,6 +43,15 @@ public class Car {
     public Car() {
     }
 
+    public Car(String carVIN, String carNumber, String carModel, String carCategory, String carColor, String carModelYear) {
+        this.carVIN = carVIN;
+        this.carNumber = carNumber;
+        this.carModel = carModel;
+        this.carCategory = carCategory;
+        this.carColor = carColor;
+        this.carModelYear = carModelYear;
+//        this.driver = driver;
+    }
 
     public Long getId() {
         return id;

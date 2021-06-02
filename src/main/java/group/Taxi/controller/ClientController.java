@@ -41,10 +41,7 @@ public class ClientController {
 
     //save client
     @PostMapping("clients")
-    public ResponseEntity<Client> createClient(@Valid @RequestBody Client client, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Client> createClient(@RequestBody Client client) {
         return new ResponseEntity<>(clientRepository.save(client), HttpStatus.OK);
     }
 

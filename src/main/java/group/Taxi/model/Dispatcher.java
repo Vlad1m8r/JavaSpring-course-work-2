@@ -59,7 +59,7 @@ public class Dispatcher {
     }
 
     public Dispatcher(String firstName, String lastName, String gender, String address, String phoneNumber,
-                      String email, int salary, String ssn, List<Order> orders) {
+                      String email, int salary, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;

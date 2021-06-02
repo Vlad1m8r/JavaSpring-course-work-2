@@ -63,7 +63,15 @@ public class Order {
     public Order() {
     }
 
-
+    public Order(Date date, Time time, double roadTime, double distance, double cost, String addressTo, String addressFrom) {
+        this.date = date;
+        this.time = time;
+        this.roadTime = roadTime;
+        this.distance = distance;
+        this.cost = cost;
+        this.addressTo = addressTo;
+        this.addressFrom = addressFrom;
+    }
 
     public Long getId() {
         return id;

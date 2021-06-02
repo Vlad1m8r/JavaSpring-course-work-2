@@ -40,10 +40,7 @@ public class DispatcherController {
 
     //save dispatcher
     @PostMapping("dispatchers")
-    public ResponseEntity<Dispatcher> createDispatcher(@Valid @RequestBody Dispatcher dispatcher, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Dispatcher> createDispatcher(@Valid @RequestBody Dispatcher dispatcher) {
         return new ResponseEntity<>(dispatcherRepository.save(dispatcher), HttpStatus.OK);
     }
 

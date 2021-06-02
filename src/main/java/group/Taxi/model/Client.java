@@ -35,7 +35,7 @@ public class Client {
     public Client() {
     }
 
-    public Client(String phoneNumber, String firstName, String lastName, List<Order> orders) {
+    public Client(String phoneNumber, String firstName, String lastName) {
         this.phoneNumber = phoneNumber;
         this.firstName = firstName;
         this.lastName = lastName;

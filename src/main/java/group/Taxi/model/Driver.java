@@ -57,7 +57,7 @@ public class Driver {
     }
 
     public Driver(String firstName, String lastName, String gender, String address, String phoneNumber,
-                  String email, Date driverLicenseIssueDate, Car car, List<Order> orders) {
+                  String email, Date driverLicenseIssueDate, Car car) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -66,7 +66,6 @@ public class Driver {
         this.email = email;
         this.driverLicenseIssueDate = driverLicenseIssueDate;
         this.car = car;
-//        this.orders = orders;
     }
 
     public Long getId() {
